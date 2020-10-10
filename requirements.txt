@@ -2,3 +2,4 @@ numpy
 pandas
 sklearn
 scikit-learn
+gunicorn
