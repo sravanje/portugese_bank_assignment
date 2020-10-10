@@ -25,7 +25,7 @@ SECRET_KEY = 'aw@u)7ii-bi)498^llh8j*bqfc(te7_%b%lj251yh@&$*6@jyv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', 'portugese-bank-app.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'portugese-bank-app.herokuapp.com']
 
 
 # Application definition
