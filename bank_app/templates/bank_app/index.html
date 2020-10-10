@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Portugese Bank Assignment
+        </title>
+    </head>
+
+    <style type="text/css">
+      .center {
+          margin: 0;
+          position: absolute;
+          left: 50%;
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+        }
+
+    </style>
+
+    <body style="margin-top: 10%;margin-left: 30px;background: #3e4444;">
+      <div style="margin-left: 30%; margin-right: 30%;">
+
+        <div class="center" style="color: #82b74b; font-size: 30px;">
+
+          <p>Upload a csv file with the following format of columns:</p>
+          <p>age, job, marital, education, default, balance, housing,
+       loan, contact, day, month, duration, campaign, pdays,
+       previous, poutcome, y</p>
+          <br>
+
+          <form class="center" action="{% url 'bank_app:index' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <input type="file"
+                     title="Upload excel file"
+                     name="csv_file"
+                     style="border: 1px solid black; padding: 5px;background: #405d27;"
+                     required="required">
+              <p>
+              <input type="submit"
+                     value="Upload"
+                     style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer; width: 265px;background: #405d27;color: #82b74b;">
+          </form>
+
+
+          <hr style="margin-top: 100px;">
+
+          <p>Accuracy: 
+          {% for i in acc %}
+              {{i}}
+          {% endfor %}%
+          </p>
+          <p style="font-size: 20px;">(^ will change once you upload a file.)</p>
+
+        </div>
+
+      </div>
+    </body>
+</html>
