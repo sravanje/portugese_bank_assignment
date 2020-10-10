@@ -1,1 +1,1 @@
-web: gunicorn wsgi --log-file -
+web: gunicorn bank_django.wsgi --log-file -
